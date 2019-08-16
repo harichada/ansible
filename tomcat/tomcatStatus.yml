@@ -1,0 +1,10 @@
+- hosts: 
+        - appservers 
+#  become: true
+  tasks:
+        - name: "Tomcat Server Status"
+          uri:
+            url: http://localhost:18080
+            return_content: yes
+          register: this
+          failed_when: "'Apache Tomcat' not in this.content"

@@ -1,0 +1,14 @@
+- hosts:
+      - webservers
+  become: true
+  tasks:
+       - name: Copy openssl and apache source to servers
+         copy:
+            src: /tmp/httpd.service
+            dest: /etc/systemd/system
+       - name: set permissions
+         shell: "chmod 644 /etc/systemd/system/httpd.service"
+         register: shell_result
+       - debug: var=shell_result.stdout_lines
+
+            

@@ -1,0 +1,12 @@
+- hosts: 
+       - "{{ var_host }}"
+  become: true
+  tasks:
+          - user:
+                      name: "{{ user }}"
+                      state: present
+                      comment: "{{ comment }}"
+                      password: "{{ pwd }}"
+                      update_password: always
+                      groups: "{{ grp }}"
+                      append: yes

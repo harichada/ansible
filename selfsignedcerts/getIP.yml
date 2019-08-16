@@ -1,0 +1,4 @@
+- hosts: webservers
+  tasks:
+#    - debug: var=ansible_default_ipv4.address
+    - debug: var={{inventory_hostname[0:3]}}

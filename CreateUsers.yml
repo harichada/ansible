@@ -1,0 +1,25 @@
+- hosts: 
+       - "{{ var_host }}"
+  become: true
+#  vars_files:
+#          - deploy1.yml
+  tasks:
+          - user:
+                      name: "deploy1" 
+                      state: present
+#                      comment: "{{ item.comment }}"
+#                      password: "3OAZQNIJ0LuZ2"
+#                      password: "y1UN34FOJ6Zm2"  # EFS@345
+                      password: "5qCrvpidVubTg"
+                      update_password: always
+#                     groups: "{{ item.groups }}"
+#                      append: yes
+#            with_items: "{{ users }}"
+#            when: "'as' in inventory_hostname"
+#                      name: "tomadmin"
+#                      state: present
+#                      comment: "Tomcat Administration Account"
+#                      password: "6dHzCv2v5sTf2"
+#                      groups: "staff"
+#                      append: yes
+#            when: "'as' in inventory_hostname"

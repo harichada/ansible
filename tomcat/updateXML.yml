@@ -1,0 +1,25 @@
+- hosts:
+     - "{{ var_host }}" 
+  become: true
+  tasks:
+      - name: change port 18080 
+        replace:
+             path: /forms/tomcat8/{{ env }}/conf/server.xml
+             regexp: '"18080"'
+             replace: '"{{ http }}"'
+             backup: yes
+      - name: Change 18443 
+        replace:
+             path: /forms/tomcat8/{{ env }}/conf/server.xml
+             regexp: '"18443"'
+             replace: '"{{ https }}"'
+      - name: change port 18009
+        replace:
+             path: /forms/tomcat8/{{ env }}/conf/server.xml
+             regexp: '"8009"'
+             replace: '"{{ ajp }}"'
+      - name: Change 8005
+        replace:
+             path: /forms/tomcat8/{{ env }}/conf/server.xml
+             regexp: '"8005"'
+             replace: '"{{ shutdown }}"'

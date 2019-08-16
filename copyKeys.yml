@@ -1,0 +1,14 @@
+- hosts:
+      - "{{ var_host }}"
+  become: true
+  tasks:
+       - name: Copy DocuSign Private Key
+         copy:
+            src: /tmp/PrivateKey.txt
+            dest: /forms/tomcat8/DocuSign/DocuSignKeys
+
+       - name: Copy DocuSign Public Key
+         copy:
+            src: /tmp/PublicKey.txt
+            dest: /forms/tomcat8/DocuSign/DocuSignKeys
+

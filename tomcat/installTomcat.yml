@@ -1,0 +1,29 @@
+- hosts:
+      - "{{ var_host }}" 
+  become: true
+  tasks:
+#       - name: Installing required packages
+#         yum:
+#           name: "{{ packages }}"
+#           state: present
+#         vars:
+#           packages:
+#           - pcre
+#           - gcc
+#           - pcre-devel
+#           - openssl-devel
+#           - expat-devel
+       - name: Copying Java and Tomcat binaries to servers
+         copy:
+            src: /tmp/binaries/tomcat
+            dest: /tmp
+       - name: Extract Java
+         unarchive: src=/tmp/tomcat/jdk-8u181-linux-x64.tar.gz dest=/forms/java remote_src=yes group=tomadmin
+       - name: Extracting Tomcat
+         unarchive: src=/tmp/tomcat/apache-tomcat-8.5.32.tar.gz dest=/forms/tomcat8 remote_src=yes group=tomadmin owner=tomadmin
+       - name: Copy   
+         shell: "cp -rp /forms/tomcat8/apache-tomcat-8.5.32/* /forms/tomcat8"
+       - name: Remove
+         file: 
+            path: "/forms/tomcat8/apache-tomcat-8.5.32"
+            state: absent

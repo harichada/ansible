@@ -1,0 +1,12 @@
+- hosts:
+      - "{{ var_host  }}" 
+  become: true
+  tasks:
+       - name: Copying openssl and apache source to servers
+         copy:
+            src: /tmp/apachectl
+            dest: /etc/rc.d/init.d
+            remote_src: no
+       - name: start on startup
+         shell: "chkconfig --level 235 apachectl on"
+

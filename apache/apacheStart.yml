@@ -1,0 +1,8 @@
+- hosts: 
+        - webservers 
+  become: true
+  tasks:
+        - name: "httpd daemon start"
+          shell: "/forms/apache24/bin/apachectl start"
+          register: cmd_res
+        - debug: msg={{ cmd_res.stdout }}

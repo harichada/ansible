@@ -1,0 +1,9 @@
+- hosts:
+      - appservers
+  become: true
+  tasks:
+       - name: Copying Tomcat Service file
+         copy:
+            src: /home/hchada/ansible/tomcat/tomcat.service
+            dest: /etc/systemd/system/
+

@@ -1,0 +1,6 @@
+- hosts: webservers
+  tasks:
+       - script: /home/hchada/test1.sh
+         register: output
+
+       - debug: var=output.stdout_lines

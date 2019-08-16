@@ -1,0 +1,122 @@
+- hosts:
+      - "{{ var_host }}"
+  become: true
+  tasks:
+     - name: Create LVM Partition # Creating Physical Volume and Volume Group
+       parted:
+            device: /dev/sdb
+            number: 1
+            flags: [ lvm ]
+            state: present
+     - name: Create Physical Volume (PV)
+       lvg: 
+         vg: datavg
+         pvs: /dev/sdb1
+         state: present
+     - name: Create Logical Volumes appsVM
+       lvol:
+           vg: datavg
+           lv: appsVM
+           size: 10G
+           state: present
+     - name: Create LV sharedVM
+       lvol:
+          vg: datavg
+          lv: sharedVM
+          size: 20G
+          state: present
+     - name: Create LV logsVM
+       lvol:
+          vg: datavg
+          lv: logsVM
+          size: 10G
+          state: present
+     - name: Create LV apacheVM
+       lvol: 
+          vg: datavg
+          lv: apacheVM
+          size: 5G
+          state: present
+       when: "'ws' in inventory_hostname"
+     - name: Create LV tomcatVM
+       lvol:
+          vg: datavg
+          lv: tomcatVM
+          size: 5G
+          state: present
+       when: "'as' in inventory_hostname"
+     - name: Format LV appsVM   # Format Logical Volumes ext4
+       filesystem:
+               fstype: ext4
+               dev: /dev/datavg/appsVM
+               force: no
+     - name: Format LV sharedVM
+       filesystem:
+               fstype: ext4
+               dev: /dev/datavg/sharedVM
+               force: no
+     - name: Format LV logsVM
+       filesystem:
+               fstype: ext4
+               dev: /dev/datavg/logsVM
+               force: no
+     - name: Format LV apacheVM
+       filesystem:
+               fstype: ext4
+               dev: /dev/datavg/apacheVM
+               force: no
+       when: "'ws' in inventory_hostname"
+     - name: Format LV tomcatVM
+       filesystem:
+               fstype: ext4
+               dev: /dev/datavg/tomcatVM
+               force: no
+       when: "'as' in inventory_hostname"
+     - name: Mount /forms/appsVM and make entry in /etc/fstab # Create mount points and mount Logical Volumes
+       mount:
+          path: /forms/apps
+          src: /dev/datavg/appsVM
+          fstype: ext4
+          opts: defaults
+          dump: 1
+          passno: 2
+          state: mounted
+     - name: Mount /forms/sharedVM and make entry in /etc/fstab
+       mount:
+          path: /forms/java
+          src: /dev/datavg/sharedVM
+          fstype: ext4
+          opts: defaults
+          dump: 1
+          passno: 2
+          state: mounted
+     - name: Mount /forms/logsVM and make entry in /etc/fstab
+       mount:
+          path: /forms/logs
+          src: /dev/datavg/logsVM
+          fstype: ext4
+          opts: defaults
+          dump: 1
+          passno: 2
+          state: mounted
+     - name: Mount /forms/apacheVM and make entry in /etc/fstab
+       mount:
+          path: /forms/apache24
+          src: /dev/datavg/apacheVM
+          fstype: ext4
+          opts: defaults
+          dump: 1
+          passno: 2
+          state: mounted
+       when: "'ws' in inventory_hostname"
+     - name: Mount /forms/tomcatVM and make entry in /etc/fstab
+       mount:
+          path: /forms/tomcat8
+          src: /dev/datavg/tomcatVM
+          fstype: ext4
+          opts: defaults
+          dump: 1
+          passno: 2
+          state: mounted
+       when: "'as' in inventory_hostname"
+          

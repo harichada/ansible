@@ -1,0 +1,8 @@
+- hosts:
+      - "{{ var_host | default('devws') }}"
+  become: true
+  tasks:
+       - name: Copy openssl and apache source to servers
+         copy:
+            src: /tmp/binaries
+            dest: /tmp

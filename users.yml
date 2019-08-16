@@ -1,0 +1,46 @@
+users:
+        - name: jthursto
+          comment: 'Jeffery Thurston,jeffery.thurston@dcss.ca.gov,916-464-3266'
+          groups: staff,wheel 
+        - name: eenrique
+          comment: 'Erwin Enriquez,erwin.enriquez@dcss.ca.gov,916-464-5784'
+          groups: staff,wheel 
+        - name: sambula 
+          comment: 'Sandeep Ambula,sandeep.ambula@dcss.ca.gov,916-464-3240'
+          groups: staff,wheel 
+        - name: ptak
+          comment: 'Paul Tak,paul.tak@dcss.ca.gov,916-464-7576'
+          groups: staff,wheel 
+        - name: kpatlola
+          comment: 'Kapil Patlola,kapil.Patlola@dcss.ca.gov,916-464-7035'
+          groups: staff,wheel 
+        - name: dsaroya 
+          comment: 'Deepak Saroya,deepak.saroya@dcss.ca.gov,(916)464-5265'
+          groups: staff,wheel 
+        - name: skiran
+          comment: 'Sai Kiran,sai.kiran@dcss.ca.gov,(916)464-5373'
+          groups: staff,wheel 
+        - name: imohamme
+          comment: 'Imran Mohammed,imran.mohammed@dcss.ca.gov,(916)464-5378'
+          groups: staff,wheel 
+        - name: gestrada
+          comment: 'Guillermo Estrada,guillermo.estrada@dcss.ca.gov,(916)464-3236'
+          groups: staff,wheel 
+        - name: ryoung
+          comment: 'Rebecca Young,rebecca.young@dcss.ca.gov,(916)464-5785'
+          groups: staff,wheel 
+        - name: sreddy
+          comment: 'Sreepadha Reddy,sreepadha.reddy@dcss.ca.gov,(916)464-5456'
+          groups: staff,wheel 
+        - name: airby 
+          comment: 'Adriana Irby,adriana.irby@dccs.ca.gov,(916)464-5016'
+          groups: staff,wheel 
+        - name: sgarrett
+          comment: 'Steve Garrett,steven.garrett@dcss.ca.gov,916-464-5266'
+          groups: staff,wheel 
+        - name: dlucky
+          comment: 'David Lucky,david.lucky@dcss.ca.gov,916-464-5519'
+          groups: staff,wheel 
+        - name: tomadmin
+          comment: 'Apache Tomcat Admin ID'
+          groups: staff

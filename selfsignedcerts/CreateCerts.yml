@@ -1,0 +1,39 @@
+- hosts:
+    - "{{ var_host }}"
+  become: true
+  become_method: sudo
+  tasks:
+    - name: Ensure directory exists for local self-signed TLS certs.
+      file:
+       path: /etc/httpd/ssl 
+       state: directory
+    - name: Delete old Key files
+      file:
+        path: /etc/httpd/ssl/sqtefs-new.key
+        state: absent
+    - name: Generate an OpenSSL private key.
+      openssl_privatekey:
+         path: /etc/httpd/ssl/sqtefs-new.key
+         size: 1024
+         state: "{{ statte }}"
+    - name: Generate an OpenSSL CSR.
+      openssl_csr:
+        path: /etc/httpd/ssl/sqtefs-new.csr
+        privatekey_path: /etc/httpd/ssl/sqtefs-new.key
+        country_name: US
+        organization_name: DCSS
+        organizational_unit_name: Env
+        emailAddress: dcsstsenvironmensunit@dcss.ca.gov
+        common_name: "100.95.20.102"
+        subject_alt_name: "DNS:efssqt.cse.ca.gov, DNS:100.95.20.102, IP:100.95.20.102"
+        state: "{{ statte }}"
+      when: "'syt' in inventory_hostname"
+
+    - name: Generate a Self Signed OpenSSL certificate.
+      openssl_certificate:
+        path: /etc/httpd/ssl/sqtefs-new.crt
+        privatekey_path: /etc/httpd/ssl/sqtefs-new.key
+        csr_path: /etc/httpd/ssl/sqtefs-new.csr
+        signature_algorithms: sha256WithRSAEncryption
+        provider: selfsigned
+        state: "{{ statte }}"

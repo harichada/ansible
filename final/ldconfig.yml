@@ -1,0 +1,8 @@
+- hosts:
+     - "{{ var_host }}"
+  become: true
+  tasks:
+     - lineinfile:
+            path: /etc/ld.so.conf.d/openssl.conf
+            line: "/opt/openssl/lib"
+            create: yes

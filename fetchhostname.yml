@@ -1,0 +1,11 @@
+- hosts: syaas 
+  become: true
+  become_user: root
+  gather_facts: no
+  tasks:
+          - name: Create file
+            file:
+                    path: /root/ansione.txt
+                    state: touch
+
+

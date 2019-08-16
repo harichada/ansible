@@ -1,0 +1,18 @@
+- hosts:
+    - devasgrp
+  become: true
+  tasks:
+    - name: Find folder
+      command: "find / -name webapps -type d"
+      register: parentdir
+    - set_fact:  
+        dirn: "{{ parentdir.stdout | dirname }}"
+    - name: Create Directories for Docusign Keys and Token
+      file:
+        path: "{{ item.1 }}/../temp" 
+        state: directory
+        owner: tomadmin
+        group: tomadmin
+        recurse: yes
+        mode: 0775
+      with_indexed_items: "{{ dirn.split('\n') }}" 

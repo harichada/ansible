@@ -1,0 +1,9 @@
+- hosts:
+     - " {{ var_hosts }} "
+- tasks:
+     - include: yumPackages.yml
+       hosts: " {{ var_hosts }} "
+     - include: CreatePartitions.yml
+       hosts: " {{ var_hosts }} "
+     - include: installApache.yml
+       hosts: " {{ var_hosts }} "

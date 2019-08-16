@@ -1,0 +1,49 @@
+- hosts:
+      - "{{ var_host }}"
+  become: true
+  tasks:
+      - name: Modify apachectl/httpd.conf for serverStatus module
+        replace:
+             path: /forms/apache24/bin/apachectl
+             regexp: '"lynx -dump"'
+             replace: '"links -dump"    # --- ANSIBLE MANAGED'
+             backup: yes
+      - name: Status URL update 
+        replace:
+             path: /forms/apache24/bin/apachectl
+             regexp: 'localhost:80'
+             replace: 'localhost:88'
+             backup: yes
+      - name: Listen on port 88 for server status 
+        lineinfile:
+             path: /forms/apache24/conf/httpd.conf
+             regexp: "Listen *:80"
+             insertafter: '^Listen'
+             line: 'Listen *:88'
+             state: present
+             backup: yes
+      - name: Add VirtualHost 
+        blockinfile:
+             path: /forms/apache24/conf/extra/httpd-vhosts.conf
+             marker: '#<!-- ANSIBLE MANAGED -->'
+             block: |
+                 <VirtualHost *:88>
+                       DocumentRoot /forms/apache24/htdocs
+                 </VirtualHost>
+             insertafter: '</VirtualHost>'
+             state: present
+             backup: yes
+      - name: Update httpd.conf 
+        blockinfile:
+             path: /forms/apache24/conf/httpd.conf
+             marker: '#<!-- ANSIBLE MANAGED -->'
+             block: |
+                 <Location "/server-status">
+                    SetHandler server-status
+                 #    Require local
+                 </Location>
+             insertafter: EOF
+             state: present
+             backup: yes
+
+               

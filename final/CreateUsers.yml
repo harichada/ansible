@@ -1,0 +1,14 @@
+- hosts: 
+       - pft1as2,pft2ws2 
+  become: true
+  vars_files:
+          - users.yml
+  tasks:
+          - user:
+                      name: "{{ item.name }}" 
+                      state: present
+                      comment: "{{ item.comment }}"
+                      password: "YMBajDAoMbnow"
+                      groups: "{{ item.groups }}"
+                      append: yes
+            with_items: "{{ users }}"

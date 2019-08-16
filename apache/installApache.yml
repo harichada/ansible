@@ -1,0 +1,35 @@
+- hosts:
+      - "{{ var_host | default('devws') }}" 
+  become: true
+  tasks:
+       - name: Installing required packages
+         yum:
+           name: "{{ packages }}"
+           state: present
+         vars:
+           packages:
+           - pcre
+           - gcc
+           - pcre-devel
+           - openssl-devel
+           - expat-devel
+       - name: Copying openssl and apache source to servers
+         copy:
+            src: /tmp/binaries
+            dest: /tmp
+       - name: Extracting openssl
+         unarchive: src=/tmp/binaries/opnessl.1.1.1.tar.gz dest=/tmp/binaries copy=no
+       - name: Installing openssl 
+         command: "{{ item }} chdir=/tmp/binaries/openssl.1.1.1"
+         with_items:
+                - ./config --prefix="/opt/openssl"
+                - make
+                - make install
+       - name: Extracting Apache
+         unarchive: src=/tmp/binaries/httpd-2.4.34.tar.gz dest=/tmp/binaries copy=no
+       - name: Installing Apache
+         command: "{{ item }} chdir=/tmp/binaries/httpd-2.3.34"
+         with_items:
+                - ./configure --with-included-apr --prefix="/forms/apache24" --enable-ssl --enable-so --with-crypto --with-openssl="/opt/openssl"
+                - make
+                - make install

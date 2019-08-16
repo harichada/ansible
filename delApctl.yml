@@ -1,0 +1,11 @@
+- hosts:
+    - all
+  become: true
+  tasks:
+    - name: Delete apache service file /etc/rc.d/init.d
+      file:
+         path: "/etc/rc.d/init.d/apachectl"
+         state: absent
+      when: "'ws' in inventory_hostname"
+
+

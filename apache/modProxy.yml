@@ -1,0 +1,22 @@
+- hosts:
+      - "{{ var_host }}"
+  become: true
+  tasks:
+      - name: Modify apachectl/httpd.conf for serverStatus module
+        replace:
+             path: /forms/apache24/conf/httpd.conf
+             regexp: '#LoadModule proxy_module modules/mod_proxy.so'
+             replace: 'LoadModule proxy_module modules/mod_proxy.so'
+             backup: yes
+      - name: Modify mod proxy http
+        replace:
+             path: /forms/apache24/conf/httpd.conf
+             regexp: '#LoadModule proxy_http_module modules/mod_proxy_http.so'
+             replace: 'LoadModule proxy_http_module modules/mod_proxy_http.so'
+             backup: yes
+      - name: Modify mod proxy http
+        replace:
+             path: /forms/apache24/conf/httpd.conf
+             regexp: '#Include conf/extra/httpd-vhosts.conf'
+             replace: 'Include conf/extra/httpd-vhosts.conf'
+             backup: yes

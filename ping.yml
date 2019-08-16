@@ -1,0 +1,8 @@
+- hosts:
+        - "{{ var_host | default('devws') }}"
+  become: true
+  tasks:
+        - shell: "df -H | grep datavg"
+          register: shell_result
+
+        - debug: var=shell_result.stdout_lines 

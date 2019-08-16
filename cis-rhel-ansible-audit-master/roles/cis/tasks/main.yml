@@ -1,0 +1,45 @@
+---
+#
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+#
+
+  - include_tasks: section_01.yml
+    tags: section1
+
+  - include_tasks: section_02.yml
+    tags: section2
+
+  - include_tasks: section_03.yml
+    tags: section3
+
+  - include_tasks: section_04.yml
+    tags: section4
+
+  - include_tasks: section_05.yml
+    tags: section5
+
+  - include_tasks: section_06.yml
+    tags: section6
+
+  - include_tasks: section_07.yml
+    tags: section7
+
+  - include_tasks: section_08.yml
+    tags: section8
+
+  - include_tasks: section_09.yml
+    tags: section9
+
+  - include_tasks: section_10.yml
+    tags: section10

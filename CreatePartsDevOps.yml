@@ -1,0 +1,60 @@
+- hosts:
+      - "{{ var_host | default('devws') }}"
+  become: true
+  tasks:
+     - name: Create LVM Partition # Creating Physical Volume and Volume Group
+       parted:
+            device: /dev/sdb
+            number: 1
+            flags: [ lvm ]
+            state: present
+     - name: Create Physical Volume (PV)
+       lvg: 
+         vg: datavg
+         pvs: /dev/sdb1
+         state: present
+     - name: Create Logical Volumes appsVM
+       lvol:
+           vg: datavg
+           lv: appsVM
+           size: 10G
+           state: present
+     - name: Create LV sharedVM
+       lvol:
+          vg: datavg
+          lv: sharedVM
+          size: 20G
+          state: present
+     - name: Create LV logsVM
+       lvol:
+          vg: datavg
+          lv: logsVM
+          size: 10G
+          state: present
+     - name: Mount /devops/appsVM and make entry in /etc/fstab # Create mount points and mount Logical Volumes
+       mount:
+          path: /devops/apps
+          src: /dev/datavg/appsVM
+          fstype: ext4
+          opts: defaults
+          dump: 1
+          passno: 2
+          state: mounted
+     - name: Mount /devops/sharedVM and make entry in /etc/fstab
+       mount:
+          path: /devops/shared
+          src: /dev/datavg/sharedVM
+          fstype: ext4
+          opts: defaults
+          dump: 1
+          passno: 2
+          state: mounted
+     - name: Mount /devops/logsVM and make entry in /etc/fstab
+       mount:
+          path: /devops/logs
+          src: /dev/datavg/logsVM
+          fstype: ext4
+          opts: defaults
+          dump: 1
+          passno: 2
+          state: mounted

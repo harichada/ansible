@@ -1,0 +1,9 @@
+- hosts:
+     - webservers
+  become: yes
+  tasks:
+    - name: Start httpd server
+      systemd:
+         state: started
+         name: httpd
+         enabled: yes 

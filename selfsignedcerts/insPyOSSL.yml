@@ -1,0 +1,21 @@
+- hosts:
+      - "{{ var_host }}"
+  become: true
+  tasks:
+       - name: Copy openssl and apache source to servers
+         copy:
+            src: /tmp/pyOpenSSL-0.15.1-1.el7.noarch.rpm
+            dest: /tmp
+       - name: Install pyOpenSSL Package
+         yum:
+           name: /tmp/pyOpenSSL-0.15.1-1.el7.noarch.rpm
+           state: present
+#         vars:
+#           packages:
+#           - rsync
+#           - nmap
+#           - sysstat
+#           - wget
+#           - links
+#           - '*'
+

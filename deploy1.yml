@@ -1,0 +1,4 @@
+users:
+        - name: deploy1
+          comment: 'Config Management Team'
+          groups: staff,wheel 

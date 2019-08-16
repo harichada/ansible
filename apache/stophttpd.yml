@@ -1,0 +1,9 @@
+- hosts:
+     - "{{ var_host }}"
+  become: yes
+  tasks:
+    - name: Stop/Start Firewall
+      systemd:
+         state: "{{ statte }}"
+         name: httpd.service  
+         enabled: yes

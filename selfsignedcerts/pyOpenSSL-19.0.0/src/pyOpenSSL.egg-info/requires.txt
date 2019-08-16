@@ -1,0 +1,11 @@
+cryptography>=2.3
+six>=1.5.2
+
+[test]
+flaky
+pretend
+pytest>=3.0.1
+
+[docs]
+sphinx
+sphinx_rtd_theme

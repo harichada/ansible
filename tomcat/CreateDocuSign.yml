@@ -1,0 +1,20 @@
+- hosts:
+    - appservers
+  become: true
+  tasks:
+    - name: Create Directories for Docusign Keys and Token
+      file:
+        path: /forms/tomcat8/DocuSign/DocuSignKeys
+        state: directory
+        owner: tomadmin
+        group: tomadmin
+        recurse: yes
+        mode: 0775
+    - name: Create Directories for Docusign Keys and Token
+      file:
+        path: /forms/tomcat8/DocuSign/DocuSignToken
+        state: directory
+        owner: tomadmin
+        group: tomadmin
+        recurse: yes
+        mode: 0775

@@ -1,0 +1,24 @@
+- hosts: 
+        - appservers 
+  become: true
+  tasks:
+#        - name: "Update profile with environment variables"
+#          blockinfile:
+#             path: /etc/profile
+#             marker: '#<!-- ANSIBLE MANAGED -->'
+#             block: |
+#                  JDK_HOME=/forms/java/jdk1.8.0_181/jre
+#                  JAVA_HOME=/forms/java/jdk1.8.0_181
+#                  CATALINA_HOME=/forms/tomcat8
+#                  CATALINA_PID=/forms/logs/tomcat.pid
+#                  PATH=$PATH:$JAVA_HOME:$JAVA_HOME/bin:$JDK_HOME:$JDK_HOME/bin:$CATALINA_HOME:$CATALINA_PID
+#                  export JAVA_HOME JDK_HOME CATALINA_HOME CATALINA_PID
+#             insertafter: EOF
+#             state: present
+#             backup: yes
+        - name: "Tomcat Server start"
+          systemd:
+               name: tomcat
+               enabled: yes
+#               scope: user 
+               state: restarted

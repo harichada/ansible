@@ -1,0 +1,22 @@
+[Unit]
+Description=Apache Tomcat Web Application Container
+After=syslog.target network.target
+
+[Service]
+Type=forking
+
+Environment=JDK_HOME=/forms/java/jdk1.8.0_181/jre
+Environment=JAVA_HOME=/forms/java/jdk1.8.0_181
+Environment=CATALINA_HOME=/forms/tomcat8
+Environment=CATALINA_PID=/forms/logs/tomcat.pid
+Environment='CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC'
+Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
+
+ExecStart=/forms/tomcat8/bin/startup.sh
+ExecStop=/forms/tomcat8/bin/shutdown.sh
+
+User=tomadmin
+Group=tomadmin
+
+[Install]
+WantedBy=multi-user.target

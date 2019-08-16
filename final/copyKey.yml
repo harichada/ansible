@@ -1,0 +1,12 @@
+- hosts:
+      - localhost
+  vars_files:
+      - servers.yml
+  tasks: 
+      - name: Copy ssh key to all servers
+        #command: "ssh-copy-id -i ~/.ssh/id_rsa.pub {{ item.server }}  "
+        command: "sshpass -f passwd.txt ssh-copy-id -i ~/.ssh/id_rsa.pub -o StrictHostKeyChecking=no {{ item.server }}"
+        register: result
+        with_items: "{{ command }}"
+      - debug: var=result.stdout_lines
+     

@@ -1,0 +1,498 @@
+---
+#
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+#
+
+  - name: 6.1.1 Enable anacron Daemon (Scored)
+    shell: rpm -q cronie-anacron
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_1 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.1
+
+  - name: 6.1.2 Enable crond Daemon (Scored)
+    shell: chkconfig --list cron
+    register: cron
+    failed_when: >
+      '3:on' not in cron.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_2 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.2
+
+  - name: 6.1.3 Set User/Group Owner and Permission on /etc/anacrontab (Scored)
+    shell: stat -L -c "%a %u %g" /etc/anacrontab | egrep ".00 0 0"
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_3 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.3
+
+  - name: 6.1.4 Set User/Group Owner and Permission on /etc/crontab (Scored)
+    shell: stat -L -c "%a %u %g" /etc/crontab | egrep ".00 0 0"
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_4 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.4
+
+  - name: 6.1.5 Set User/Group Owner and Permission on /etc/cron.hourly (Scored)
+    shell: stat -L -c "%a %u %g" /etc/cron.hourly | egrep ".00 0 0"
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_5 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.5
+
+  - name: 6.1.6 Set User/Group Owner and Permission on /etc/cron.daily  (Scored)
+    shell: stat -L -c "%a %u %g" /etc/cron.daily | egrep ".00 0 0"
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_6 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.6
+
+  - name: 6.1.7 Set User/Group Owner and Permission on /etc/cron.weekly  (Scored)
+    shell: stat -L -c "%a %u %g" /etc/cron.weekly | egrep ".00 0 0"
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_7 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.7
+
+  - name: 6.1.8 Set User/Group Owner and Permission on /etc/cron.monthly (Scored)
+    shell: stat -L -c "%a %u %g" /etc/cron.monthly | egrep ".00 0 0"
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_8 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.8
+
+  - name: 6.1.9 Set User/Group Owner and Permission on /etc/cron.d (Scored)
+    shell: stat -L -c "%a %u %g" /etc/cron.d | egrep ".00 0 0"
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_9 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.9
+
+  - stat:
+      path: /etc/at.deny
+    register: atdeny
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_10 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.10
+  - stat:
+      path: /etc/at.allow
+    changed_when: false
+    ignore_errors: true
+    register: atallow
+    when: section_6_1_10 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.10
+  - name: 6.1.10 Restrict at Daemon (Scored)
+    shell: 'ls -l /etc/at.deny '
+    failed_when: > 
+      atdeny.stat.exists == True 
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_10 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.10
+  - name: 6.1.10 Restrict at Daemon (Scored)
+    shell: stat -L -c "%a %u %g" /etc/at.allow | egrep ".00 0 0"
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_10 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.10
+
+  - stat:
+      path: /etc/cron.deny
+    register: crondeny
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_11 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.11
+  - stat:
+      path: /etc/cron.allow
+    changed_when: false
+    ignore_errors: true
+    register: cronallow
+    when: section_6_1_11 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.11
+
+  - name: 6.1.11 Restrict at/cron to Authorized Users (Scored)
+    shell: ls -l  /etc/cron.deny
+    failed_when: crondeny.stat.exists == True
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_11 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.11
+
+  - name: 6.1.11 Restrict at/cron to Authorized Users (Scored)
+    shell: echo '/etc/cron.allow' && stat -L -c "%a %u %g" /etc/cron.allow | egrep ".00 0 0"
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_11 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.11
+
+  - name: 6.1.11 Restrict at/cron to Authorized Users (Scored)
+    shell: stat -L -c "%a %u %g" /etc/at.allow| egrep ".00 0 0"
+    changed_when: false
+    ignore_errors: true
+    when: section_6_1_11 | bool
+    tags:
+      - scored
+      - section6.1
+      - section6.1.11
+
+  - name: 6.2.1 Set SSH Protocol to 2 (Scored)
+    shell: 'grep "^Protocol" {{ sshd_config }}'
+    register: out_6_2_1
+    failed_when: >
+      'Protocol 2' not in out_6_2_1.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_1 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.1
+
+  - name: 6.2.2 Set LogLevel to INFO (Scored)
+    shell: 'grep "^LogLevel" {{ sshd_config }}'
+    register: out_6_2_2
+    failed_when: >
+      'LogLevel INFO' not in out_6_2_2.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_2 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.2
+
+  - stat:
+      path: '{{ sshd_config }}'
+    register: sshdconfig
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_3 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.3
+
+  - name: 6.2.3 Set Permissions on /etc/ssh/sshd_config (Scored)
+    shell: 'ls -l {{ sshd_config }}'
+    failed_when: >
+      sshdconfig.stat.uid != 0 and sshdconfig.stat.gid != 0 and sshdconfig.stat.mode != 0600
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_3 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.3
+
+  - name: 6.2.4 Disable SSH X11 Forwarding (Scored)
+    shell: 'grep  "^X11Forwarding" {{ sshd_config }}'
+    register: out_6_2_4
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_4 | bool
+    failed_when: >
+      'X11Forwarding no' not in out_6_2_4.stdout
+    tags:
+      - scored
+      - section6.2
+      - section6.2.4
+
+  - name: 6.2.5 Set SSH MaxAuthTries to 4 or Less (Scored)
+    shell: 'grep  "^MaxAuthTries" {{ sshd_config }}'
+    register: out_6_2_5
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_5 | bool
+    failed_when: >
+      "MaxAuthTries 4" not in out_6_2_5.stdout
+    tags:
+      - scored
+      - section6.2
+      - section6.2.5
+
+  - name: 6.2.6 Set SSH IgnoreRhosts to Yes (Scored)
+    shell: 'grep  "^IgnoreRhosts" {{ sshd_config }}'
+    register: out_6_2_6
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_6 | bool
+    failed_when: >
+      "IgnoreRhosts yes" not in out_6_2_6.stdout
+    tags:
+      - scored
+      - section6.2
+      - section6.2.6
+
+  - name: 6.2.7 Set SSH HostbasedAuthentication to No (Scored)
+    shell: 'grep  "^HostbasedAuthentication" {{ sshd_config }}'
+    register: out_6_2_7
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_7 | bool
+    failed_when: >
+      "HostbasedAuthentication no" not in out_6_2_7.stdout
+    tags:
+      - scored
+      - section6.2
+      - section6.2.7
+
+  - name: 6.2.8 Disable SSH Root Login (Scored)
+    shell: 'grep  "^PermitRootLogin" {{ sshd_config }}'
+    register: out_6_2_8
+    failed_when: >
+      "PermitRootLogin no" not in out_6_2_8.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_8 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.8
+
+  - name: 6.2.9 Set SSH PermitEmptyPasswords to No (Scored)
+    shell: 'grep  "^PermitEmptyPasswords" {{ sshd_config }}'
+    register: out_6_2_9
+    failed_when: >
+      "PermitEmptyPasswords no" not in out_6_2_9.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_9 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.9
+
+  - name: 6.2.10 Do Not Allow Users to Set Environment Options (Scored)
+    shell: 'grep  "^PermitUserEnvironment" {{ sshd_config }}'
+    register: out_6_2_10
+    failed_when: >
+      "PermitUserEnvironment no" not in out_6_2_10.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_10 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.10
+
+  - name: 6.2.11 Use Only Approved Cipher in Counter Mode (Scored)
+    shell: 'grep "^Ciphers" {{ sshd_config }}'
+    register: out_6_2_11
+    failed_when: >
+      "Ciphers aes128-ctr,aes192-ctr,aes256-ctr" not in out_6_2_11.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_11 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.11
+
+  - name: 6.2.12 Set Idle Timeout Interval for User Login (Scored)
+    shell: 'grep "^ClientAliveInterval" {{ sshd_config }}'
+    register: out_6_2_12
+    failed_when: >
+      "ClientAliveInterval 300" not in out_6_2_12.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_12 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.12
+
+  - name: 6.2.12 Set Idle Timeout Interval for User Login (Scored)
+    shell: 'grep "^ClientAliveCountMax" {{ sshd_config }}'
+    register: out_6_2_12_2
+    failed_when: >
+      "ClientAliveCountMax 0" not in out_6_2_12_2.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_12 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.12
+
+  - name: 6.2.13 Limit Access via SSH (Scored)
+    shell: 'grep "^AllowUsers" {{ sshd_config }}'
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_13 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.13
+
+  - name: 6.2.13 Limit Access via SSH (Scored)
+    shell: 'grep "^AllowGroups" {{ sshd_config }}'
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_13 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.13
+
+  - name: 6.2.13 Limit Access via SSH (Scored)
+    shell: 'grep "^DenyUsers" {{ sshd_config }}'
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_13 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.13
+
+  - name: 6.2.13 Limit Access via SSH (Scored)
+    shell: 'grep "^DenyGroups" {{ sshd_config }}'
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_13 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.13
+
+  - name: 6.2.14 Set SSH Banner (Scored)
+    shell: 'grep "^Banner" {{ sshd_config }}'
+    register: out_6_2_14
+    failed_when: >
+      "Banner /etc/banner" not in out_6_2_14.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_2_14 | bool
+    tags:
+      - scored
+      - section6.2
+      - section6.2.14
+
+  - name: 6.3.1 Upgrade Password Hashing Algorithm to SHA-512 (Scored)
+    shell: authconfig --test | grep hashing | grep sha512
+    changed_when: false
+    ignore_errors: true
+    when: section_6_3_1 | bool
+    tags:
+      - scored
+      - section6.3
+      - section6.3.1
+
+  - name: 6.3.2 Set Password Creation Requirement Parameters Using pam_cracklib (Scored) 
+    shell: 'grep pam_cracklib.so /etc/pam.d/system-auth'
+    register: out_6_3_2
+    failed_when: >
+      "password required pam_cracklib.so try_first_pass retry=3 minlen=14 dcredit=-1 ucredit=-1 ocredit=-1 lcredit=-1" not in out_6_3_2.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_3_2 | bool
+    tags:
+      - scored
+      - section6.3
+      - section6.3.2
+
+  - name: 6.3.3 Set Lockout for Failed Password Attempts (Not Scored)
+    debug: msg="TODO"
+    when: section_6_3_3 | bool
+    tags:
+      - scored
+      - section6.3
+      - section6.3.3
+
+  - name: 6.3.4 Limit Password Reuse (Scored)
+    shell: 'grep "remember" /etc/pam.d/system-auth'
+    register: out_6_3_4
+    failed_when: >
+      "password sufficient pam_unix.so remember=5" not in out_6_3_4.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_3_4 | bool
+    tags:
+      - scored
+      - section6.3
+      - section6.3.4
+
+  - name: 6.4 Restrict root login to system console (Not Scored)
+    shell:  cat /etc/securetty
+    changed_when: false
+    ignore_errors: true
+    when: section_6_4 | bool
+    tags:
+      - notscored
+      - section6.4
+
+  - name: 6.5 Restrict Access to the su Command (Scored)
+    shell: 'grep pam_wheel.so /etc/pam.d/su'
+    register: out_6_5
+    failed_when: >
+      '^auth required pam_wheel.so use_uid' not in out_6_5.stdout
+    changed_when: false
+    ignore_errors: true
+    when: section_6_5 | bool
+    tags:
+      - scored
+      - section6.5

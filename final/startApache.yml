@@ -1,0 +1,9 @@
+- hosts:
+     - "{{ var_hosts }}"
+  become: true
+  tasks: 
+      - name: Copy ssh key to all servers
+        command: /forms/apache24/bin/apachectl start
+        register: result
+      - debug: var=result.stdout_lines
+     

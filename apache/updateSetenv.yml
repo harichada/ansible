@@ -1,0 +1,11 @@
+- hosts:
+    - "{{ var_host }}"
+  become: true
+  tasks:
+    - name: update setenv.sh with java_opts
+      lineinfile:
+           path: "/forms/tomcat8/{{ env }}/bin/setenv.sh"
+           line: 'JAVA_OPTS="-Xms256m -Xmx512m"'
+           owner: tomadmin
+           group: tomadmin
+       

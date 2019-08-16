@@ -1,0 +1,35 @@
+- hosts:
+    - "{{ var_host }}"
+  become: true
+  tasks:
+    - name: Ensure directory exists for local self-signed TLS certs.
+      file:
+       path: /forms/apache24/ssl 
+       state: directory
+    - name: Delete old Key files
+      file:
+        path: /forms/apache24/ssl/{{ inventory_hostname }}.key
+        state: absent
+    - name: Generate an OpenSSL private key.
+      openssl_privatekey:
+         path: /forms/apache24/ssl/{{ inventory_hostname }}.key
+         size: 2048
+         state: "{{ statte }}"
+    - name: Generate an OpenSSL CSR.
+      openssl_csr:
+        path: /forms/apache24/ssl/{{ inventory_hostname }}.csr
+        privatekey_path: /forms/apache24/ssl/{{ inventory_hostname }}.key
+        country_name: US
+        organization_name: DCSS
+        organizational_unit_name: Env
+        email_address: dcsstsenvironmentsunit@dcss.ca.gov
+        common_name: "100.95.20.99"
+        subject_alt_name: "DNS:efs{{ inventory_hostname[0:3] }}.cse.ca.gov, DNS:{{ ansible_default_ipv4.address }}"
+    - name: Generate a Self Signed OpenSSL certificate.
+      openssl_certificate:
+        path: /forms/apache24/ssl/{{ inventory_hostname }}.crt
+        privatekey_path: /forms/apache24/ssl/{{ inventory_hostname }}.key
+        csr_path: /forms/apache24/ssl/{{ inventory_hostname }}.csr
+        signature_algorithms: sha256WithRSAEncryption
+        provider: selfsigned
+        state: "{{ statte }}"

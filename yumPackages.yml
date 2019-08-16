@@ -1,0 +1,17 @@
+- hosts:
+      - "{{ var_host }}"
+  become: true
+  tasks:
+       - name: Install packages rsync, nmap, sysstat, wget and update to latest
+         yum:
+           name: "{{ packages }}"
+           state: present 
+         vars:
+           packages:
+           - rsync
+           - nmap
+           - sysstat
+           - wget
+           - links
+           - '*'
+     
