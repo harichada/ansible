@@ -3,8 +3,9 @@
 #  become: true
   tasks:
         - name: "httpd daemon status"
-          shell: "/usr/sbin/apachectl status | awk '/Active/ { print; exit } '"
+          shell: "/usr/sbin/apachectl status | awk '/Active/ { print; exit }'"
 #          shell: "hostname"             
-          shell: "apachectl status | awk '/Active/ { print; exit} '"
           register: cmd_res
-        - debug: var={{ cmd_res.stdout }}
+        - set_fact:
+             "{{ inventory_hostname }}={{ cmd_res.stdout }}"
+        - debug: var={{ inventory_hostname }}
