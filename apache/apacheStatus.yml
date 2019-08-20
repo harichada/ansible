@@ -5,4 +5,4 @@
         - name: "httpd daemon status"
           shell: "/usr/sbin/apachectl status | awk '/Active/ { print; exit } '"
           register: cmd_res
-        - debug: msg={{ cmd_res.stdout }}
+        - debug: var={{ cmd_res.stdout }}
