@@ -3,6 +3,7 @@
 #  become: true
   tasks:
         - name: "httpd daemon status"
-          shell: "/forms/apache24/bin/apachectl status | awk '/Server uptime/ { print; exit} '"
+#          shell: "hostname"             
+          shell: "apachectl status | awk '/Active/ { print; exit} '"
           register: cmd_res
         - debug: msg={{ cmd_res.stdout }}
