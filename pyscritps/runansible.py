@@ -26,10 +26,11 @@ if not os.path.exists(playbook_path):
 Options = namedtuple('Options', ['listtags', 'listtasks', 'listhosts', 'syntax', 'connection','module_path', 'forks', 'remote_user', 'private_key_file', 'ssh_common_args', 'ssh_extra_args', 'sftp_extra_args', 'scp_extra_args', 'become', 'become_method', 'become_user', 'verbosity', 'check','diff'])
 options = Options(listtags=False, listtasks=False, listhosts=False, syntax=False, connection='ssh', module_path=None, forks=100, remote_user='hchada', private_key_file=None, ssh_common_args=None, ssh_extra_args=None, sftp_extra_args=None, scp_extra_args=None, become=False, become_method='sudo', become_user='root', verbosity=None, check=False, diff=False)
 
-variable_manager.extra_vars = {'hosts': 'appservers'} # This can accomodate various other command line arguments.`
+variable_manager.extra_vars = {} # This can accomodate various other command line arguments.`
 
-passwords = {'conn_pass': 'King@345', 'become_pass': 'King@345'}
+passwords = {'conn_pass': '', 'become_pass': 'King@345'}
 
 pbex = PlaybookExecutor(playbooks=[playbook_path], inventory=inventory, variable_manager=variable_manager, loader=loader, options=options, passwords=passwords)
 
 results = pbex.run()
+print results

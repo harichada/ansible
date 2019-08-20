@@ -11688,3 +11688,1165 @@ passwd: all authentication tokens updated successfully.New password: Retype new 
 Changing password for user hchada.
 passwd: all authentication tokens updated successfully.New password: Retype new password: 
 
+2019-08-16 16:56:45,290 p=12922 u=hchada |  devas | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-16 16:56:45,404 p=12922 u=hchada |  pft1as1 | CHANGED | rc=0 >>
+CGDCSSL1056UL.calcloud.local
+
+2019-08-16 16:56:45,433 p=12922 u=hchada |  sytws | CHANGED | rc=0 >>
+CGDCSSL1050UL.calcloud.local
+
+2019-08-16 16:56:45,442 p=12922 u=hchada |  pft1as2 | CHANGED | rc=0 >>
+CGDCSSL1057UL.calcloud.local
+
+2019-08-16 16:56:45,450 p=12922 u=hchada |  pft1ws1 | CHANGED | rc=0 >>
+CGDCSSL1054UL.calcloud.local
+
+2019-08-16 16:56:45,942 p=12922 u=hchada |  pft1ws2 | CHANGED | rc=0 >>
+CGDCSSL1055UL.calcloud.local
+
+2019-08-16 16:56:45,950 p=12922 u=hchada |  sytas | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-16 16:56:45,990 p=12922 u=hchada |  prodws1 | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-16 16:56:46,099 p=12922 u=hchada |  pft2ws2 | CHANGED | rc=0 >>
+CGDCSSL1059UL.calcloud.local
+
+2019-08-16 16:56:46,145 p=12922 u=hchada |  pft2ws1 | CHANGED | rc=0 >>
+CGDCSSL1058UL.calcloud.local
+
+2019-08-16 16:56:46,410 p=12922 u=hchada |  syaas | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-16 16:56:46,450 p=12922 u=hchada |  devws | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Authentication or permission failure. In some cases, you may have been able to authenticate and did not have permissions on the target directory. Consider changing the remote tmp path in ansible.cfg to a path rooted in \"/tmp\". Failed command was: ( umask 77 && mkdir -p \"` echo /tmp/.ansible/tmp/ansible-tmp-1565999806.14-188574412621040 `\" && echo ansible-tmp-1565999806.14-188574412621040=\"` echo /tmp/.ansible/tmp/ansible-tmp-1565999806.14-188574412621040 `\" ), exited with result 1", 
+    "unreachable": true
+}
+2019-08-16 16:56:46,589 p=12922 u=hchada |  sqtas | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-16 16:56:46,598 p=12922 u=hchada |  prodws2 | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-16 16:56:46,794 p=12922 u=hchada |  pft2as1 | CHANGED | rc=0 >>
+CGDCSSL1060UL.calcloud.local
+
+2019-08-16 16:56:47,062 p=12922 u=hchada |  pft2as2 | CHANGED | rc=0 >>
+CGDCSSL1061UL.calcloud.local
+
+2019-08-16 16:56:47,082 p=12922 u=hchada |  prodas1 | CHANGED | rc=0 >>
+CGDCSSL1064UL.calcloud.local
+
+2019-08-16 16:56:47,114 p=12922 u=hchada |  sqtws | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-16 16:56:47,201 p=12922 u=hchada |  prodas2 | CHANGED | rc=0 >>
+CGDCSSL1065UL.calcloud.local
+
+2019-08-16 16:56:47,306 p=12922 u=hchada |  syaws | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-19 15:14:26,988 p=4622 u=hchada |  pft2ws1 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:12 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20427 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1343 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1343 /usr/sbin/httpd -DFOREGROUND
+           ├─14380 /usr/sbin/httpd -DFOREGROUND
+           ├─17002 /usr/sbin/httpd -DFOREGROUND
+           ├─20439 /usr/sbin/httpd -DFOREGROUND
+           ├─20440 /usr/sbin/httpd -DFOREGROUND
+           ├─20441 /usr/sbin/httpd -DFOREGROUND
+           ├─20442 /usr/sbin/httpd -DFOREGROUND
+           ├─20443 /usr/sbin/httpd -DFOREGROUND
+           └─20444 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:12 CGDCSSL1058UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:12 CGDCSSL1058UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1058UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1058UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:14:26,997 p=4622 u=hchada |  pft2ws2 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:07 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20553 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1343 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1343 /usr/sbin/httpd -DFOREGROUND
+           ├─16802 /usr/sbin/httpd -DFOREGROUND
+           ├─17213 /usr/sbin/httpd -DFOREGROUND
+           ├─20565 /usr/sbin/httpd -DFOREGROUND
+           ├─20566 /usr/sbin/httpd -DFOREGROUND
+           ├─20567 /usr/sbin/httpd -DFOREGROUND
+           ├─20568 /usr/sbin/httpd -DFOREGROUND
+           ├─20569 /usr/sbin/httpd -DFOREGROUND
+           └─20570 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:07 CGDCSSL1059UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:07 CGDCSSL1059UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1059UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1059UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:14:27,005 p=4622 u=hchada |  pft1ws1 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:06 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 21086 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1347 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1347 /usr/sbin/httpd -DFOREGROUND
+           ├─22507 /usr/sbin/httpd -DFOREGROUND
+           ├─22508 /usr/sbin/httpd -DFOREGROUND
+           └─22904 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local httpd[1347]: [Sun Aug 18 10:40:06.814919 2019] [proxy:debug] [pid 1347:tid 140279694903424] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local httpd[1347]: [Sun Aug 18 10:40:06.814927 2019] [proxy:debug] [pid 1347:tid 140279694903424] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local httpd[1347]: [Sun Aug 18 10:40:06.814931 2019] [proxy:debug] [pid 1347:tid 140279694903424] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1054UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022327 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022610 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022617 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022622 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:14:27,014 p=4622 u=hchada |  syaws | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:05 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20588 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1335 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1335 /usr/sbin/httpd -DFOREGROUND
+           ├─20600 /usr/sbin/httpd -DFOREGROUND
+           ├─20601 /usr/sbin/httpd -DFOREGROUND
+           ├─20602 /usr/sbin/httpd -DFOREGROUND
+           ├─20603 /usr/sbin/httpd -DFOREGROUND
+           ├─20604 /usr/sbin/httpd -DFOREGROUND
+           └─20605 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:05 CGDCSSL1046UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:05 CGDCSSL1046UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1046UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1046UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:14:27,022 p=4622 u=hchada |  sqtws | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:21 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20499 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1341 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1341 /usr/sbin/httpd -DFOREGROUND
+           ├─20511 /usr/sbin/httpd -DFOREGROUND
+           ├─20512 /usr/sbin/httpd -DFOREGROUND
+           ├─20513 /usr/sbin/httpd -DFOREGROUND
+           ├─20514 /usr/sbin/httpd -DFOREGROUND
+           ├─20515 /usr/sbin/httpd -DFOREGROUND
+           └─20516 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:21 CGDCSSL1052UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:21 CGDCSSL1052UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1052UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1052UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:14:27,357 p=4622 u=hchada |  devws | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Authentication or permission failure. In some cases, you may have been able to authenticate and did not have permissions on the target directory. Consider changing the remote tmp path in ansible.cfg to a path rooted in \"/tmp\". Failed command was: ( umask 77 && mkdir -p \"` echo /tmp/.ansible/tmp/ansible-tmp-1566252867.06-176306955629275 `\" && echo ansible-tmp-1566252867.06-176306955629275=\"` echo /tmp/.ansible/tmp/ansible-tmp-1566252867.06-176306955629275 `\" ), exited with result 1", 
+    "unreachable": true
+}
+2019-08-19 15:14:27,593 p=4622 u=hchada |  prodws1 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Mon 2019-07-29 09:09:04 PDT; 3 weeks 0 days ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 28083 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 22950 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 8214 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 8214 /usr/sbin/httpd -DFOREGROUND
+           ├─22974 /usr/sbin/httpd -DFOREGROUND
+           ├─22975 /usr/sbin/httpd -DFOREGROUND
+           └─23355 /usr/sbin/httpd -DFOREGROUND
+
+Aug 15 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 15 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 16 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 16 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 17 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 17 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 18 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 18 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:14:27,597 p=4622 u=hchada |  prodws2 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Mon 2019-07-29 09:45:06 PDT; 3 weeks 0 days ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 25006 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 19824 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 7891 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 7891 /usr/sbin/httpd -DFOREGROUND
+           ├─19836 /usr/sbin/httpd -DFOREGROUND
+           ├─19837 /usr/sbin/httpd -DFOREGROUND
+           └─20229 /usr/sbin/httpd -DFOREGROUND
+
+Aug 15 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 15 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 16 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 16 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 17 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 17 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 18 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 18 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:14:27,611 p=4622 u=hchada |  pft1ws2 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:12 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 21068 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1341 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1341 /usr/sbin/httpd -DFOREGROUND
+           ├─21080 /usr/sbin/httpd -DFOREGROUND
+           ├─21081 /usr/sbin/httpd -DFOREGROUND
+           └─22884 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local httpd[1341]: [Sun Aug 18 10:40:12.282364 2019] [proxy:debug] [pid 1341:tid 140492488554624] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local httpd[1341]: [Sun Aug 18 10:40:12.282380 2019] [proxy:debug] [pid 1341:tid 140492488554624] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local httpd[1341]: [Sun Aug 18 10:40:12.282392 2019] [proxy:debug] [pid 1341:tid 140492488554624] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695693 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695931 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695938 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695947 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:14:27,630 p=4622 u=hchada |  sytws | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:06 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20494 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1341 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1341 /usr/sbin/httpd -DFOREGROUND
+           ├─ 2667 /usr/sbin/httpd -DFOREGROUND
+           ├─ 2669 /usr/sbin/httpd -DFOREGROUND
+           ├─ 2671 /usr/sbin/httpd -DFOREGROUND
+           ├─20506 /usr/sbin/httpd -DFOREGROUND
+           ├─20507 /usr/sbin/httpd -DFOREGROUND
+           ├─20508 /usr/sbin/httpd -DFOREGROUND
+           ├─20509 /usr/sbin/httpd -DFOREGROUND
+           ├─20510 /usr/sbin/httpd -DFOREGROUND
+           ├─20511 /usr/sbin/httpd -DFOREGROUND
+           └─23144 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:06 CGDCSSL1050UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:06 CGDCSSL1050UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1050UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1050UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:14,321 p=4843 u=hchada |  pft1ws2 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:12 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 21068 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1341 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1341 /usr/sbin/httpd -DFOREGROUND
+           ├─21080 /usr/sbin/httpd -DFOREGROUND
+           ├─21081 /usr/sbin/httpd -DFOREGROUND
+           └─22884 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local httpd[1341]: [Sun Aug 18 10:40:12.282364 2019] [proxy:debug] [pid 1341:tid 140492488554624] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local httpd[1341]: [Sun Aug 18 10:40:12.282380 2019] [proxy:debug] [pid 1341:tid 140492488554624] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local httpd[1341]: [Sun Aug 18 10:40:12.282392 2019] [proxy:debug] [pid 1341:tid 140492488554624] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695693 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695931 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695938 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695947 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:14,338 p=4843 u=hchada |  prodws2 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Mon 2019-07-29 09:45:06 PDT; 3 weeks 0 days ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 25006 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 19824 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 7891 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 7891 /usr/sbin/httpd -DFOREGROUND
+           ├─19836 /usr/sbin/httpd -DFOREGROUND
+           ├─19837 /usr/sbin/httpd -DFOREGROUND
+           └─20229 /usr/sbin/httpd -DFOREGROUND
+
+Aug 15 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 15 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 16 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 16 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 17 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 17 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 18 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 18 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:14,347 p=4843 u=hchada |  pft1ws1 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:06 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 21086 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1347 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1347 /usr/sbin/httpd -DFOREGROUND
+           ├─22507 /usr/sbin/httpd -DFOREGROUND
+           ├─22508 /usr/sbin/httpd -DFOREGROUND
+           └─22904 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local httpd[1347]: [Sun Aug 18 10:40:06.814919 2019] [proxy:debug] [pid 1347:tid 140279694903424] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local httpd[1347]: [Sun Aug 18 10:40:06.814927 2019] [proxy:debug] [pid 1347:tid 140279694903424] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local httpd[1347]: [Sun Aug 18 10:40:06.814931 2019] [proxy:debug] [pid 1347:tid 140279694903424] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1054UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022327 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022610 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022617 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022622 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:14,356 p=4843 u=hchada |  sqtws | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:21 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20499 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1341 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1341 /usr/sbin/httpd -DFOREGROUND
+           ├─20511 /usr/sbin/httpd -DFOREGROUND
+           ├─20512 /usr/sbin/httpd -DFOREGROUND
+           ├─20513 /usr/sbin/httpd -DFOREGROUND
+           ├─20514 /usr/sbin/httpd -DFOREGROUND
+           ├─20515 /usr/sbin/httpd -DFOREGROUND
+           └─20516 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:21 CGDCSSL1052UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:21 CGDCSSL1052UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1052UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1052UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:14,357 p=4843 u=hchada |  prodws1 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Mon 2019-07-29 09:09:04 PDT; 3 weeks 0 days ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 28083 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 22950 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 8214 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 8214 /usr/sbin/httpd -DFOREGROUND
+           ├─22974 /usr/sbin/httpd -DFOREGROUND
+           ├─22975 /usr/sbin/httpd -DFOREGROUND
+           └─23355 /usr/sbin/httpd -DFOREGROUND
+
+Aug 15 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 15 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 16 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 16 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 17 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 17 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 18 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 18 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:14,904 p=4843 u=hchada |  pft2ws1 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:12 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20427 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1343 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1343 /usr/sbin/httpd -DFOREGROUND
+           ├─14380 /usr/sbin/httpd -DFOREGROUND
+           ├─17002 /usr/sbin/httpd -DFOREGROUND
+           ├─20439 /usr/sbin/httpd -DFOREGROUND
+           ├─20440 /usr/sbin/httpd -DFOREGROUND
+           ├─20441 /usr/sbin/httpd -DFOREGROUND
+           ├─20442 /usr/sbin/httpd -DFOREGROUND
+           ├─20443 /usr/sbin/httpd -DFOREGROUND
+           └─20444 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:12 CGDCSSL1058UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:12 CGDCSSL1058UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1058UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1058UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:14,938 p=4843 u=hchada |  pft2ws2 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:07 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20553 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1343 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1343 /usr/sbin/httpd -DFOREGROUND
+           ├─16802 /usr/sbin/httpd -DFOREGROUND
+           ├─17213 /usr/sbin/httpd -DFOREGROUND
+           ├─20565 /usr/sbin/httpd -DFOREGROUND
+           ├─20566 /usr/sbin/httpd -DFOREGROUND
+           ├─20567 /usr/sbin/httpd -DFOREGROUND
+           ├─20568 /usr/sbin/httpd -DFOREGROUND
+           ├─20569 /usr/sbin/httpd -DFOREGROUND
+           └─20570 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:07 CGDCSSL1059UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:07 CGDCSSL1059UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1059UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1059UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:14,941 p=4843 u=hchada |  sytws | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:06 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20494 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1341 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1341 /usr/sbin/httpd -DFOREGROUND
+           ├─ 2667 /usr/sbin/httpd -DFOREGROUND
+           ├─ 2669 /usr/sbin/httpd -DFOREGROUND
+           ├─ 2671 /usr/sbin/httpd -DFOREGROUND
+           ├─20506 /usr/sbin/httpd -DFOREGROUND
+           ├─20507 /usr/sbin/httpd -DFOREGROUND
+           ├─20508 /usr/sbin/httpd -DFOREGROUND
+           ├─20509 /usr/sbin/httpd -DFOREGROUND
+           ├─20510 /usr/sbin/httpd -DFOREGROUND
+           ├─20511 /usr/sbin/httpd -DFOREGROUND
+           └─23144 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:06 CGDCSSL1050UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:06 CGDCSSL1050UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1050UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1050UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:14,942 p=4843 u=hchada |  devws | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:06 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20589 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1339 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─  897 /usr/sbin/httpd -DFOREGROUND
+           ├─ 1339 /usr/sbin/httpd -DFOREGROUND
+           ├─19864 /usr/sbin/httpd -DFOREGROUND
+           ├─20601 /usr/sbin/httpd -DFOREGROUND
+           ├─20602 /usr/sbin/httpd -DFOREGROUND
+           ├─20603 /usr/sbin/httpd -DFOREGROUND
+           ├─20604 /usr/sbin/httpd -DFOREGROUND
+           ├─20605 /usr/sbin/httpd -DFOREGROUND
+           └─20606 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:06 CGDCSSL1049UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:06 CGDCSSL1049UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1049UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1049UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:14,953 p=4843 u=hchada |  syaws | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:05 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20588 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1335 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1335 /usr/sbin/httpd -DFOREGROUND
+           ├─20600 /usr/sbin/httpd -DFOREGROUND
+           ├─20601 /usr/sbin/httpd -DFOREGROUND
+           ├─20602 /usr/sbin/httpd -DFOREGROUND
+           ├─20603 /usr/sbin/httpd -DFOREGROUND
+           ├─20604 /usr/sbin/httpd -DFOREGROUND
+           └─20605 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:05 CGDCSSL1046UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:05 CGDCSSL1046UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1046UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1046UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:23,645 p=4982 u=hchada |  sqtws | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:21 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20499 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1341 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1341 /usr/sbin/httpd -DFOREGROUND
+           ├─20511 /usr/sbin/httpd -DFOREGROUND
+           ├─20512 /usr/sbin/httpd -DFOREGROUND
+           ├─20513 /usr/sbin/httpd -DFOREGROUND
+           ├─20514 /usr/sbin/httpd -DFOREGROUND
+           ├─20515 /usr/sbin/httpd -DFOREGROUND
+           └─20516 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:21 CGDCSSL1052UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:21 CGDCSSL1052UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1052UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1052UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:23,654 p=4982 u=hchada |  prodws1 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Mon 2019-07-29 09:09:04 PDT; 3 weeks 0 days ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 28083 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 22950 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 8214 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 8214 /usr/sbin/httpd -DFOREGROUND
+           ├─22974 /usr/sbin/httpd -DFOREGROUND
+           ├─22975 /usr/sbin/httpd -DFOREGROUND
+           └─23355 /usr/sbin/httpd -DFOREGROUND
+
+Aug 15 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 15 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 16 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 16 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 17 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 17 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 18 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 18 00:01:02 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1062UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:23,665 p=4982 u=hchada |  sytws | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:06 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20494 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1341 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1341 /usr/sbin/httpd -DFOREGROUND
+           ├─ 2667 /usr/sbin/httpd -DFOREGROUND
+           ├─ 2669 /usr/sbin/httpd -DFOREGROUND
+           ├─ 2671 /usr/sbin/httpd -DFOREGROUND
+           ├─20506 /usr/sbin/httpd -DFOREGROUND
+           ├─20507 /usr/sbin/httpd -DFOREGROUND
+           ├─20508 /usr/sbin/httpd -DFOREGROUND
+           ├─20509 /usr/sbin/httpd -DFOREGROUND
+           ├─20510 /usr/sbin/httpd -DFOREGROUND
+           ├─20511 /usr/sbin/httpd -DFOREGROUND
+           └─23144 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:06 CGDCSSL1050UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:06 CGDCSSL1050UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1050UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1050UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:23,674 p=4982 u=hchada |  prodws2 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Mon 2019-07-29 09:45:06 PDT; 3 weeks 0 days ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 25006 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 19824 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 7891 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 7891 /usr/sbin/httpd -DFOREGROUND
+           ├─19836 /usr/sbin/httpd -DFOREGROUND
+           ├─19837 /usr/sbin/httpd -DFOREGROUND
+           └─20229 /usr/sbin/httpd -DFOREGROUND
+
+Aug 15 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 15 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 16 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 16 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 17 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 17 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 18 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 18 00:01:01 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1063UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:23,683 p=4982 u=hchada |  pft1ws1 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:06 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 21086 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1347 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1347 /usr/sbin/httpd -DFOREGROUND
+           ├─22507 /usr/sbin/httpd -DFOREGROUND
+           ├─22508 /usr/sbin/httpd -DFOREGROUND
+           └─22904 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local httpd[1347]: [Sun Aug 18 10:40:06.814919 2019] [proxy:debug] [pid 1347:tid 140279694903424] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local httpd[1347]: [Sun Aug 18 10:40:06.814927 2019] [proxy:debug] [pid 1347:tid 140279694903424] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local httpd[1347]: [Sun Aug 18 10:40:06.814931 2019] [proxy:debug] [pid 1347:tid 140279694903424] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:06 CGDCSSL1054UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1054UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022327 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022610 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022617 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local httpd[21086]: [Mon Aug 19 00:01:02.022622 2019] [proxy:debug] [pid 21086:tid 139621940574336] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:02 CGDCSSL1054UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:23,993 p=4982 u=hchada |  pft1ws2 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:12 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 21068 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1341 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1341 /usr/sbin/httpd -DFOREGROUND
+           ├─21080 /usr/sbin/httpd -DFOREGROUND
+           ├─21081 /usr/sbin/httpd -DFOREGROUND
+           └─22884 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local httpd[1341]: [Sun Aug 18 10:40:12.282364 2019] [proxy:debug] [pid 1341:tid 140492488554624] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local httpd[1341]: [Sun Aug 18 10:40:12.282380 2019] [proxy:debug] [pid 1341:tid 140492488554624] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local httpd[1341]: [Sun Aug 18 10:40:12.282392 2019] [proxy:debug] [pid 1341:tid 140492488554624] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 18 10:40:12 CGDCSSL1055UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695693 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695931 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.64:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695938 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2090): AH01147: Defining worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local httpd[21068]: [Mon Aug 19 00:01:01.695947 2019] [proxy:debug] [pid 21068:tid 140155376277632] mod_proxy.c(2095): AH01148: Defined worker 'http://100.95.21.69:18080' for balancer 'balancer://mycluster'
+Aug 19 00:01:01 CGDCSSL1055UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:23,995 p=4982 u=hchada |  pft2ws1 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:12 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20427 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1343 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1343 /usr/sbin/httpd -DFOREGROUND
+           ├─14380 /usr/sbin/httpd -DFOREGROUND
+           ├─17002 /usr/sbin/httpd -DFOREGROUND
+           ├─20439 /usr/sbin/httpd -DFOREGROUND
+           ├─20440 /usr/sbin/httpd -DFOREGROUND
+           ├─20441 /usr/sbin/httpd -DFOREGROUND
+           ├─20442 /usr/sbin/httpd -DFOREGROUND
+           ├─20443 /usr/sbin/httpd -DFOREGROUND
+           └─20444 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:12 CGDCSSL1058UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:12 CGDCSSL1058UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1058UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1058UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:23,997 p=4982 u=hchada |  pft2ws2 | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:07 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20553 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1343 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1343 /usr/sbin/httpd -DFOREGROUND
+           ├─16802 /usr/sbin/httpd -DFOREGROUND
+           ├─17213 /usr/sbin/httpd -DFOREGROUND
+           ├─20565 /usr/sbin/httpd -DFOREGROUND
+           ├─20566 /usr/sbin/httpd -DFOREGROUND
+           ├─20567 /usr/sbin/httpd -DFOREGROUND
+           ├─20568 /usr/sbin/httpd -DFOREGROUND
+           ├─20569 /usr/sbin/httpd -DFOREGROUND
+           └─20570 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:07 CGDCSSL1059UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:07 CGDCSSL1059UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1059UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1059UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:24,007 p=4982 u=hchada |  devws | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:06 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20589 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1339 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─  897 /usr/sbin/httpd -DFOREGROUND
+           ├─ 1339 /usr/sbin/httpd -DFOREGROUND
+           ├─19864 /usr/sbin/httpd -DFOREGROUND
+           ├─20601 /usr/sbin/httpd -DFOREGROUND
+           ├─20602 /usr/sbin/httpd -DFOREGROUND
+           ├─20603 /usr/sbin/httpd -DFOREGROUND
+           ├─20604 /usr/sbin/httpd -DFOREGROUND
+           ├─20605 /usr/sbin/httpd -DFOREGROUND
+           └─20606 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:06 CGDCSSL1049UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:06 CGDCSSL1049UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1049UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:02 CGDCSSL1049UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:24,017 p=4982 u=hchada |  syaws | CHANGED | rc=0 >>
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:05 PDT; 1 day 4h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20588 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 1335 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─ 1335 /usr/sbin/httpd -DFOREGROUND
+           ├─20600 /usr/sbin/httpd -DFOREGROUND
+           ├─20601 /usr/sbin/httpd -DFOREGROUND
+           ├─20602 /usr/sbin/httpd -DFOREGROUND
+           ├─20603 /usr/sbin/httpd -DFOREGROUND
+           ├─20604 /usr/sbin/httpd -DFOREGROUND
+           └─20605 /usr/sbin/httpd -DFOREGROUND
+
+Aug 18 10:40:05 CGDCSSL1046UL.calcloud.local systemd[1]: Starting The Apache HTTP Server...
+Aug 18 10:40:05 CGDCSSL1046UL.calcloud.local systemd[1]: Started The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1046UL.calcloud.local systemd[1]: Reloading The Apache HTTP Server.
+Aug 19 00:01:01 CGDCSSL1046UL.calcloud.local systemd[1]: Reloaded The Apache HTTP Server.
+
+2019-08-19 15:16:50,493 p=5108 u=hchada |  syaas | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:11 PDT; 1 day 4h ago
+  Process: 1664 ExecStart=/forms/tomcat8/bin/startup.sh (code=exited, status=0/SUCCESS)
+ Main PID: 1717 (java)
+   CGroup: /system.slice/tomcat.service
+           └─1717 /forms/java/jdk1.8.0_181/bin/java -Dnop -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -DLOG_FILE= -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Xms512M -Xmx1024M -server -XX:+UseParallelGC -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Aug 18 10:40:11 CGDCSSL1047UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:11 CGDCSSL1047UL.calcloud.local startup.sh[1664]: Existing PID file found during start.
+Aug 18 10:40:11 CGDCSSL1047UL.calcloud.local startup.sh[1664]: Removing/clearing stale PID file.
+Aug 18 10:40:11 CGDCSSL1047UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:16:50,585 p=5108 u=hchada |  pft1as2 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:08 PDT; 1 day 4h ago
+  Process: 1654 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 1681 (java)
+   CGroup: /system.slice/tomcat.service
+           └─1681 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Aug 18 10:40:08 CGDCSSL1057UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:08 CGDCSSL1057UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:16:50,604 p=5108 u=hchada |  pft2as1 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:07 PDT; 1 day 4h ago
+  Process: 1653 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 1687 (java)
+   CGroup: /system.slice/tomcat.service
+           └─1687 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Aug 18 10:40:07 CGDCSSL1060UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:07 CGDCSSL1060UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:16:50,617 p=5108 u=hchada |  pft1as1 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:07 PDT; 1 day 4h ago
+  Process: 1657 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 1695 (java)
+   CGroup: /system.slice/tomcat.service
+           └─1695 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Aug 18 10:40:07 CGDCSSL1056UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:07 CGDCSSL1056UL.calcloud.local catalina.sh[1657]: Tomcat started.
+Aug 18 10:40:07 CGDCSSL1056UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:16:50,633 p=5108 u=hchada |  pft2as2 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:12 PDT; 1 day 4h ago
+  Process: 1663 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 1694 (java)
+   CGroup: /system.slice/tomcat.service
+           └─1694 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Aug 18 10:40:12 CGDCSSL1061UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:12 CGDCSSL1061UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:16:51,092 p=5108 u=hchada |  devas | FAILED | rc=3 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)non-zero return code
+
+2019-08-19 15:16:51,192 p=5108 u=hchada |  sqtas | FAILED | rc=3 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Sun 2019-08-18 10:40:11 PDT; 1 day 4h ago
+  Process: 1664 ExecStart=/forms/tomcat8/bin/startup.sh (code=exited, status=203/EXEC)
+
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1664]: Failed at step EXEC spawning /forms/tomcat8/bin/startup.sh: No such file or directory
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1]: tomcat.service: control process exited, code=exited status=203
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1]: Failed to start Apache Tomcat Web Application Container.
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1]: Unit tomcat.service entered failed state.
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1]: tomcat.service failed.non-zero return code
+
+2019-08-19 15:16:51,211 p=5108 u=hchada |  prodas2 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2019-07-03 17:52:38 PDT; 1 months 16 days ago
+  Process: 6736 ExecStop=/forms/tomcat8/bin/catalina.sh stop (code=exited, status=0/SUCCESS)
+  Process: 6773 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 6780 (java)
+   CGroup: /system.slice/tomcat.service
+           └─6780 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Jul 03 17:52:38 CGDCSSL1065UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Jul 03 17:52:38 CGDCSSL1065UL.calcloud.local catalina.sh[6773]: Tomcat started.
+Jul 03 17:52:38 CGDCSSL1065UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:16:51,221 p=5108 u=hchada |  prodas1 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2019-07-03 17:50:26 PDT; 1 months 16 days ago
+  Process: 8196 ExecStop=/forms/tomcat8/bin/catalina.sh stop (code=exited, status=0/SUCCESS)
+  Process: 8234 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 8241 (java)
+   CGroup: /system.slice/tomcat.service
+           └─8241 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Jul 03 17:50:26 CGDCSSL1064UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Jul 03 17:50:26 CGDCSSL1064UL.calcloud.local catalina.sh[8234]: Tomcat started.
+Jul 03 17:50:26 CGDCSSL1064UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:16:51,223 p=5108 u=hchada |  sytas | FAILED | rc=3 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Sun 2019-08-18 10:40:16 PDT; 1 day 4h ago
+  Process: 1668 ExecStart=/forms/tomcat8/bin/startup.sh (code=exited, status=203/EXEC)
+
+Aug 18 10:40:16 CGDCSSL1051UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:16 CGDCSSL1051UL.calcloud.local systemd[1]: tomcat.service: control process exited, code=exited status=203
+Aug 18 10:40:16 CGDCSSL1051UL.calcloud.local systemd[1]: Failed to start Apache Tomcat Web Application Container.
+Aug 18 10:40:16 CGDCSSL1051UL.calcloud.local systemd[1]: Unit tomcat.service entered failed state.
+Aug 18 10:40:16 CGDCSSL1051UL.calcloud.local systemd[1]: tomcat.service failed.non-zero return code
+
+2019-08-19 15:17:15,654 p=5318 u=hchada |  sqtas | FAILED | rc=3 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Sun 2019-08-18 10:40:11 PDT; 1 day 4h ago
+  Process: 1664 ExecStart=/forms/tomcat8/bin/startup.sh (code=exited, status=203/EXEC)
+
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1664]: Failed at step EXEC spawning /forms/tomcat8/bin/startup.sh: No such file or directory
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1]: tomcat.service: control process exited, code=exited status=203
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1]: Failed to start Apache Tomcat Web Application Container.
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1]: Unit tomcat.service entered failed state.
+Aug 18 10:40:11 CGDCSSL1053UL.calcloud.local systemd[1]: tomcat.service failed.non-zero return code
+
+2019-08-19 15:17:15,664 p=5318 u=hchada |  prodas1 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2019-07-03 17:50:26 PDT; 1 months 16 days ago
+  Process: 8196 ExecStop=/forms/tomcat8/bin/catalina.sh stop (code=exited, status=0/SUCCESS)
+  Process: 8234 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 8241 (java)
+   CGroup: /system.slice/tomcat.service
+           └─8241 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Jul 03 17:50:26 CGDCSSL1064UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Jul 03 17:50:26 CGDCSSL1064UL.calcloud.local catalina.sh[8234]: Tomcat started.
+Jul 03 17:50:26 CGDCSSL1064UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:17:15,672 p=5318 u=hchada |  pft1as1 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:07 PDT; 1 day 4h ago
+  Process: 1657 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 1695 (java)
+   CGroup: /system.slice/tomcat.service
+           └─1695 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Aug 18 10:40:07 CGDCSSL1056UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:07 CGDCSSL1056UL.calcloud.local catalina.sh[1657]: Tomcat started.
+Aug 18 10:40:07 CGDCSSL1056UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:17:15,681 p=5318 u=hchada |  prodas2 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2019-07-03 17:52:38 PDT; 1 months 16 days ago
+  Process: 6736 ExecStop=/forms/tomcat8/bin/catalina.sh stop (code=exited, status=0/SUCCESS)
+  Process: 6773 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 6780 (java)
+   CGroup: /system.slice/tomcat.service
+           └─6780 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Jul 03 17:52:38 CGDCSSL1065UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Jul 03 17:52:38 CGDCSSL1065UL.calcloud.local catalina.sh[6773]: Tomcat started.
+Jul 03 17:52:38 CGDCSSL1065UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:17:15,695 p=5318 u=hchada |  pft1as2 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:08 PDT; 1 day 4h ago
+  Process: 1654 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 1681 (java)
+   CGroup: /system.slice/tomcat.service
+           └─1681 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Aug 18 10:40:08 CGDCSSL1057UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:08 CGDCSSL1057UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:17:15,970 p=5318 u=hchada |  syaas | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:11 PDT; 1 day 4h ago
+  Process: 1664 ExecStart=/forms/tomcat8/bin/startup.sh (code=exited, status=0/SUCCESS)
+ Main PID: 1717 (java)
+   CGroup: /system.slice/tomcat.service
+           └─1717 /forms/java/jdk1.8.0_181/bin/java -Dnop -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -DLOG_FILE= -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Xms512M -Xmx1024M -server -XX:+UseParallelGC -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Aug 18 10:40:11 CGDCSSL1047UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:11 CGDCSSL1047UL.calcloud.local startup.sh[1664]: Existing PID file found during start.
+Aug 18 10:40:11 CGDCSSL1047UL.calcloud.local startup.sh[1664]: Removing/clearing stale PID file.
+Aug 18 10:40:11 CGDCSSL1047UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:17:16,042 p=5318 u=hchada |  devas | FAILED | rc=3 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)non-zero return code
+
+2019-08-19 15:17:16,061 p=5318 u=hchada |  pft2as2 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:12 PDT; 1 day 4h ago
+  Process: 1663 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 1694 (java)
+   CGroup: /system.slice/tomcat.service
+           └─1694 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Aug 18 10:40:12 CGDCSSL1061UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:12 CGDCSSL1061UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:17:16,068 p=5318 u=hchada |  pft2as1 | CHANGED | rc=0 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 10:40:07 PDT; 1 day 4h ago
+  Process: 1653 ExecStart=/forms/tomcat8/bin/catalina.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 1687 (java)
+   CGroup: /system.slice/tomcat.service
+           └─1687 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+Aug 18 10:40:07 CGDCSSL1060UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:07 CGDCSSL1060UL.calcloud.local systemd[1]: Started Apache Tomcat Web Application Container.
+
+2019-08-19 15:17:16,068 p=5318 u=hchada |  sytas | FAILED | rc=3 >>
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Sun 2019-08-18 10:40:16 PDT; 1 day 4h ago
+  Process: 1668 ExecStart=/forms/tomcat8/bin/startup.sh (code=exited, status=203/EXEC)
+
+Aug 18 10:40:16 CGDCSSL1051UL.calcloud.local systemd[1]: Starting Apache Tomcat Web Application Container...
+Aug 18 10:40:16 CGDCSSL1051UL.calcloud.local systemd[1]: tomcat.service: control process exited, code=exited status=203
+Aug 18 10:40:16 CGDCSSL1051UL.calcloud.local systemd[1]: Failed to start Apache Tomcat Web Application Container.
+Aug 18 10:40:16 CGDCSSL1051UL.calcloud.local systemd[1]: Unit tomcat.service entered failed state.
+Aug 18 10:40:16 CGDCSSL1051UL.calcloud.local systemd[1]: tomcat.service failed.non-zero return code
+
+2019-08-19 15:18:48,547 p=5548 u=hchada |  syaas | CHANGED | rc=0 >>
+tomadmin  1717     1  0 Aug18 ?        00:01:54 /forms/java/jdk1.8.0_181/bin/java -Dnop -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -DLOG_FILE= -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Xms512M -Xmx1024M -server -XX:+UseParallelGC -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+hchada    5548  4568 68 15:18 pts/0    00:00:00 /usr/bin/python2 /usr/bin/ansible appservers -i inventory -m shell -a ps -ef | grep java
+hchada    5559  5548  5 15:18 pts/0    00:00:00 /usr/bin/python2 /usr/bin/ansible appservers -i inventory -m shell -a ps -ef | grep java
+hchada    5561  5548  4 15:18 pts/0    00:00:00 /usr/bin/python2 /usr/bin/ansible appservers -i inventory -m shell -a ps -ef | grep java
+hchada    5563  5548 17 15:18 pts/0    00:00:00 /usr/bin/python2 /usr/bin/ansible appservers -i inventory -m shell -a ps -ef | grep java
+hchada    5565  5548  4 15:18 pts/0    00:00:00 /usr/bin/python2 /usr/bin/ansible appservers -i inventory -m shell -a ps -ef | grep java
+hchada    5566  5548  4 15:18 pts/0    00:00:00 /usr/bin/python2 /usr/bin/ansible appservers -i inventory -m shell -a ps -ef | grep java
+hchada    5652  5646  0 15:18 pts/2    00:00:00 /bin/sh -c ps -ef | grep java
+hchada    5654  5652  0 15:18 pts/2    00:00:00 grep java
+
+2019-08-19 15:18:48,656 p=5548 u=hchada |  sqtas | CHANGED | rc=0 >>
+tomadmin  1716     1  0 Aug18 ?        00:01:21 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/sqt02/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9090 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/sqt02 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/sqt02/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1717     1  0 Aug18 ?        00:01:17 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/sqt03/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9091 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/sqt03 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/sqt03/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1718     1  0 Aug18 ?        00:01:20 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/sqt01/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9089 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/sqt01 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/sqt01/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1719     1  0 Aug18 ?        00:01:18 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/sqt04/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9092 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/sqt04 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/sqt04/temp org.apache.catalina.startup.Bootstrap start
+hchada    2015  2014  0 15:18 pts/0    00:00:00 /bin/sh -c ps -ef | grep java
+hchada    2017  2015  0 15:18 pts/0    00:00:00 grep java
+
+2019-08-19 15:18:48,664 p=5548 u=hchada |  pft1as2 | CHANGED | rc=0 >>
+hchada    1542  1541  0 15:18 pts/0    00:00:00 /bin/sh -c ps -ef | grep java
+hchada    1544  1542  0 15:18 pts/0    00:00:00 grep java
+tomadmin  1681     1  0 Aug18 ?        00:03:59 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+2019-08-19 15:18:48,674 p=5548 u=hchada |  devas | CHANGED | rc=0 >>
+tomadmin  1730     1  0 Aug18 ?        00:01:24 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/team04/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9089 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/team04 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/team04/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1732     1  0 Aug18 ?        00:01:24 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/team09/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/team09 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/team09/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1738     1  0 Aug18 ?        00:01:26 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/uit05/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/uit05 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/uit05/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1739     1  0 Aug18 ?        00:01:26 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/team05/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/team05 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/team05/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1743     1  0 Aug18 ?        00:01:38 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/trn03/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/trn03 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/trn03/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1744     1  0 Aug18 ?        00:01:26 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/team06/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/team06 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/team06/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1745     1  0 Aug18 ?        00:01:23 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/uit04/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/uit04 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/uit04/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1759     1  0 Aug18 ?        00:01:38 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/trn04/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/trn04 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/trn04/temp org.apache.catalina.startup.Bootstrap start
+hchada    5862  5861  0 15:18 pts/0    00:00:00 /bin/sh -c ps -ef | grep java
+hchada    5864  5862  0 15:18 pts/0    00:00:00 grep java
+
+2019-08-19 15:18:48,682 p=5548 u=hchada |  pft1as1 | CHANGED | rc=0 >>
+tomadmin  1695     1  0 Aug18 ?        00:04:53 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+hchada    1767  1766  0 15:18 pts/0    00:00:00 /bin/sh -c ps -ef | grep java
+hchada    1769  1767  0 15:18 pts/0    00:00:00 grep java
+
+2019-08-19 15:18:49,119 p=5548 u=hchada |  sytas | CHANGED | rc=0 >>
+tomadmin  1735     1  0 Aug18 ?        00:01:22 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/syt02/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9100 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/syt02 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/syt02/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1741     1  0 Aug18 ?        00:01:20 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/syt12/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9107 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/syt12 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/syt12/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1742     1  0 Aug18 ?        00:01:32 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/syt08/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9105 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/syt08 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/syt08/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1745     1  0 Aug18 ?        00:01:24 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/syt03/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9101 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/syt03 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/syt03/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1747     1  0 Aug18 ?        00:01:33 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/syt06/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9103 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/syt06 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/syt06/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1752     1  0 Aug18 ?        00:01:34 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/syt04/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9102 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/syt04 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/syt04/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1758     1  0 Aug18 ?        00:01:19 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/syt11/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9106 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/syt11 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/syt11/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1759     1  0 Aug18 ?        00:01:33 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/syt07/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9104 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/syt07 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/syt07/temp org.apache.catalina.startup.Bootstrap start
+tomadmin  1765     1  0 Aug18 ?        00:01:21 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/syt01/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms256m -Xmx512m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/base/bin/bootstrap.jar:/forms/tomcat8/base/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8/syt01 -Dcatalina.home=/forms/tomcat8/base -Djava.io.tmpdir=/forms/tomcat8/syt01/temp org.apache.catalina.startup.Bootstrap start
+hchada    6385  6384  0 15:18 pts/0    00:00:00 /bin/sh -c ps -ef | grep java
+hchada    6387  6385  0 15:18 pts/0    00:00:00 grep java
+
+2019-08-19 15:18:49,214 p=5548 u=hchada |  pft2as1 | CHANGED | rc=0 >>
+hchada     980   979  0 15:18 pts/0    00:00:00 /bin/sh -c ps -ef | grep java
+hchada     982   980  0 15:18 pts/0    00:00:00 grep java
+tomadmin  1687     1  0 Aug18 ?        00:03:27 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+2019-08-19 15:18:49,260 p=5548 u=hchada |  pft2as2 | CHANGED | rc=0 >>
+hchada    1547  1546  0 15:18 pts/0    00:00:00 /bin/sh -c ps -ef | grep java
+hchada    1549  1547  0 15:18 pts/0    00:00:00 grep java
+tomadmin  1694     1  0 Aug18 ?        00:03:43 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -XX:+UseParallelGC -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+
+2019-08-19 15:18:49,273 p=5548 u=hchada |  prodas2 | CHANGED | rc=0 >>
+tomadmin  6780     1  0 Jul03 ?        01:34:21 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+hchada    9504  9503  0 15:18 pts/0    00:00:00 /bin/sh -c ps -ef | grep java
+hchada    9506  9504  0 15:18 pts/0    00:00:00 grep java
+
+2019-08-19 15:18:49,293 p=5548 u=hchada |  prodas1 | CHANGED | rc=0 >>
+tomadmin  8241     1  0 Jul03 ?        01:51:31 /forms/java/jdk1.8.0_181/bin/java -Djava.util.logging.config.file=/forms/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -javaagent:/forms/apps/apm/wily/Agent.jar -Dcom.wily.introscope.agentProfile=/forms/apps/apm/wily/core/config/IntroscopeAgent_tomcat.profile -Xms1024m -Xmx2048m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.rmi.port=9099 -Dignore.endorsed.dirs= -classpath /forms/tomcat8/bin/bootstrap.jar:/forms/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/forms/tomcat8 -Dcatalina.home=/forms/tomcat8 -Djava.io.tmpdir=/forms/tomcat8/temp org.apache.catalina.startup.Bootstrap start
+hchada   11442 11441  0 15:18 pts/0    00:00:00 /bin/sh -c ps -ef | grep java
+hchada   11444 11442  0 15:18 pts/0    00:00:00 grep java
+
+2019-08-20 10:48:20,651 p=4964 u=hchada |  devas | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-20 10:48:20,677 p=4964 u=hchada |  devws | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-20 10:48:29,555 p=5004 u=hchada |  devas | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-20 10:48:31,581 p=5004 u=hchada |  devws | FAILED | rc=1 >>
+Changing password for user hchada.New password: Retype new password: Password change aborted.
+New password: Password change aborted.
+New password: Password change aborted.
+passwd: Have exhausted maximum number of retries for servicenon-zero return code
+
+2019-08-20 10:49:31,926 p=5083 u=hchada |  devas | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-20 10:49:33,598 p=5083 u=hchada |  devws | FAILED | rc=1 >>
+Changing password for user hchada.New password: Retype new password: Password change aborted.
+New password: Password change aborted.
+New password: Password change aborted.
+passwd: Have exhausted maximum number of retries for servicenon-zero return code
+
+2019-08-20 10:50:12,328 p=5157 u=hchada |  devws | FAILED | rc=1 >>
+Changing password for user hchada.New password: Retype new password: Password change aborted.
+New password: Password change aborted.
+New password: Password change aborted.
+passwd: Have exhausted maximum number of retries for servicenon-zero return code
+
+2019-08-20 10:51:07,975 p=5228 u=hchada |  devas | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-20 10:51:12,953 p=5255 u=hchada |  devas | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-20 10:51:17,102 p=5277 u=hchada |  devas | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2019-08-20 10:51:21,121 p=5300 u=hchada |  devas | FAILED | rc=-1 >>
+Incorrect sudo password
+
