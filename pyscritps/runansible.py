@@ -28,7 +28,7 @@ options = Options(listtags=False, listtasks=False, listhosts=False, syntax=False
 
 variable_manager.extra_vars = {} # This can accomodate various other command line arguments.`
 
-passwords = {'conn_pass': '', 'become_pass': 'King@345'}
+passwords = {'conn_pass': '', 'become_pass': '@345'}
 
 pbex = PlaybookExecutor(playbooks=[playbook_path], inventory=inventory, variable_manager=variable_manager, loader=loader, options=options, passwords=passwords)
 
