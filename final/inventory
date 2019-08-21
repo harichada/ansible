@@ -7,11 +7,11 @@ syaws
 [syaasgrp]
 syaas
 [sytwsgrp]
-sytws ansible_sudo_pass=Hari\@345
+sytws 
 [sytasgrp]
 sytas
 [sqtwsgrp]
-sqtws ansible_sudo_pass=Hari\@345
+sqtws 
 [sqtasgrp]
 sqtas
 [pft1wsgrp]
