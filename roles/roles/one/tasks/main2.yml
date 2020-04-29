@@ -1,0 +1,8 @@
+---
+- name: first role
+  shell: "id -un"
+  register: result
+- name: create file with variable
+  copy:
+    dest: /tmp/id.txt
+    content: "vhost: {{result.stdout}}"

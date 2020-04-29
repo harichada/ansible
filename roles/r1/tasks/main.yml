@@ -1,0 +1,3 @@
+- name: save precious value
+  set_fact: 
+      pantsu: shiroi

@@ -1,0 +1,8 @@
+- hosts:
+    - localhost
+  roles:
+    - /home/hchada/EFS/ansible/roles/roles/one
+- hosts: 
+    - "{{ hostvars['localhost']['result']['stdout'] }}"
+  roles:
+    - /home/hchada/EFS/ansible/roles/roles/two

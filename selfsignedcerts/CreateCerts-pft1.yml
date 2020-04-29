@@ -9,31 +9,30 @@
        state: directory
     - name: Delete old Key files
       file:
-        path: /etc/httpd/ssl/pft2efs-new.key
+        path: /etc/httpd/ssl/efsprod-new.key
         state: absent
     - name: Generate an OpenSSL private key.
       openssl_privatekey:
-         path: /etc/httpd/ssl/pft2efs-new.key
+         path: /etc/httpd/ssl/efsprod-new.key
          size: 1024
          state: "{{ statte }}"
     - name: Generate an OpenSSL CSR.
       openssl_csr:
-        path: /etc/httpd/ssl/pft2efs-new.csr
-        privatekey_path: /etc/httpd/ssl/pft2efs-new.key
+        path: /etc/httpd/ssl/efsprod-new.csr
+        privatekey_path: /etc/httpd/ssl/efsprod-new.key
         country_name: US
         organization_name: DCSS
         organizational_unit_name: Env
         emailAddress: dcsstsenvironmensunit@dcss.ca.gov
-        common_name: "100.95.20.93"
-        subject_alt_name: "DNS:efspft2.cse.ca.gov, DNS:100.95.20.93, IP:100.95.20.93"
+        common_name: "100.95.20.60"
+        subject_alt_name: "DNS:efsprod.cse.ca.gov, IP:100.95.20.60, IP:100.95.20.15, IP:100.95.20.16"
         state: "{{ statte }}"
-      when: "'pft2' in inventory_hostname"
 
     - name: Generate a Self Signed OpenSSL certificate.
       openssl_certificate:
-        path: /etc/httpd/ssl/pft2efs-new.crt
-        privatekey_path: /etc/httpd/ssl/pft2efs-new.key
-        csr_path: /etc/httpd/ssl/pft2efs-new.csr
+        path: /etc/httpd/ssl/efsprod-new.crt
+        privatekey_path: /etc/httpd/ssl/efsprod-new.key
+        csr_path: /etc/httpd/ssl/efsprod-new.csr
         signature_algorithms: sha256WithRSAEncryption
         provider: selfsigned
         state: "{{ statte }}"

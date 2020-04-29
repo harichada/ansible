@@ -1,0 +1,7 @@
+---
+- name: first role
+  shell: "id -un"
+  register: result
+- debug: var=result.stdout
+- set_fact:
+     vhost:{{ result.stdout }}

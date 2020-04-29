@@ -1,0 +1,53 @@
+ 1022  git clone https://github.com/miguelgrinberg/oreilly-intro-to-flask-video.git
+ 1023  sudo yum install git
+ 1024  git clone https://github.com/miguelgrinberg/oreilly-intro-to-flask-video.git
+ 1049  git init
+ 1050  git remote add origin https://gitlabtest.dcss.ca.gov/environments/ansiblescripts.git
+ 1051  git add .
+ 1052  git commit -m "Initial Commit"
+ 1053  git putsh -u origin master
+ 1054  git push -u origin master
+ 1055* ping gitlabtest
+ 1058  git --version
+ 1060  git init
+ 1063  ls -la *.git
+ 1064  ls -la | grep .git
+ 1065  git config user.name "Harikishore Chada"
+ 1066  git config user.email "harikishore.chada@dcss.ca.gov"
+ 1067  gir remote add origin https://100.95.22.79/environments/ansiblescripts.git
+ 1068  git remote add origin https://100.95.22.79/environments/ansiblescripts.git
+ 1069  git remote -v
+ 1070  git add .
+ 1071  git status
+ 1072  git push -u origin master
+ 1074  git remote remove origin
+ 1075  git status
+ 1076  git remote -v
+ 1077  git remote add origin https://100.95.22.79/environmemnts/ansiblescripts.git
+ 1078  git push -u origin master
+ 1081  git remote remove origin
+ 1082  ping gitlabtest.dcss.ca.gov
+ 1084  ping gitlabtest.dcss.ca.gov
+ 1085  git remote add origin https://gitlabtest.dcss.ca.gov/environments/ansiblescripts.git
+ 1086  git push -u origin master
+ 1087  git config --list
+ 1088  git config --global --list
+ 1089  git status
+ 1091  ls -la | grep .git
+ 1097  git config --global user.name "HariKishore Chada"
+ 1098  git config --global user.email "harikishore.chada@dcss.ca.gov"
+ 1099  git config --global --list
+ 1100  git push -u origin master
+ 1101  which git
+ 1102  sudo find / -name ".gitconfig" 
+ 1103  sudo find / -name "gitconfig" 
+ 1104  git config --system --list
+ 1105  sudo cp ~/.gitconfig /etc/gitconfig
+ 1106  git config --system --list
+ 1107  git push -u origin master
+ 1108  git log 
+ 1109  git commit --amend --author="Harikishore Chada<harikishore.chada@dcss.ca.gov>"
+ 1110  git commit --amend --author="Harikishore Chada <harikishore.chada@dcss.ca.gov>"
+ 1111  git log 
+ 1112  git push -u origin master
+ 1113  history | grep git > gitcommands.txt
